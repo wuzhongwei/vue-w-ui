@@ -1,6 +1,7 @@
 import Theme from 'vitepress/dist/client/theme-default'
 import { registerComponents } from './register-components.js'
 import WUI from '../../../wui/vue-devui'
+// import WUI from '../../../build/vue-devui'
 
 export default {
   ...Theme,

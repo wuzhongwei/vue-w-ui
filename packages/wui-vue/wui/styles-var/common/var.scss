@@ -227,7 +227,7 @@ $disabled: map.merge(
   ),
   $disabled
 );
-
+// button size
 $common-component-size: () !default;
 $common-component-size: map.merge(
   (
@@ -629,7 +629,7 @@ $cascader: map.merge(
 $button: () !default;
 $button: map.merge(
   (
-    'font-weight': getCssVar('font-weight-primary'),
+    'font-weight': getCssVar('font-weight-primary'), //var(--w-button-font-weight-primary)
     'border-color': getCssVar('border-color'),
     'bg-color': getCssVar('fill-color', 'blank'),
     'text-color': getCssVar('text-color', 'regular'),

@@ -11,5 +11,5 @@ yarn-error.log
 .history
 .vscode
 .idea
-packages/wui-vue/node_modules
+coverage
 .pnpm-debug.log

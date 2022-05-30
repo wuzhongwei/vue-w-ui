@@ -6,7 +6,7 @@
   "module": "sheep-ui.es.js",
   "scripts": {
     "dev": "pnpm --filter wui-vue dev",
-    "build:lib": "pnpm --filter wui-vue build:lib",
+    "build": "pnpm --filter wui-vue build:lib",
     "test": "pnpm --filter wui-vue test"
   },
   "dependencies": {

@@ -15,9 +15,9 @@ $button-icon-span-gap: map.merge(
   ),
   $button-icon-span-gap
 );
-
+// $button: ("font-weight": var(--w-font-weight-primary), "border-color": var(--w-border-color), "bg-color": var(--w-fill-color-blank), "text-color": var(--w-text-color-regular), "disabled-text-color": var(--w-disabled-text-color), "disabled-bg-color": var(--w-fill-color-blank), "disabled-border-color": var(--w-border-color-light), "divide-border-color": rgba(255, 255, 255, 0.5), "hover-text-color": var(--w-color-primary), "hover-bg-color": var(--w-color-primary-light-9), "hover-border-color": var(--w-color-primary-light-7), "active-text-color": var(--w-button-hover-text-color), "active-border-color": var(--w-color-primary), "active-bg-color": var(--w-button-hover-bg-color))
 @include b(button) {
-  @include set-component-css-var('button', $button);
+  @include set-component-css-var('button', $button); // return --w-button-font-weight: var(--w-font-weight-primary); --w-button-border-color: var(--w-border-color);
 }
 
 @include b(button) {

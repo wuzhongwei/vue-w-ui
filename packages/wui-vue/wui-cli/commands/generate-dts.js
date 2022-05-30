@@ -19,7 +19,6 @@ function generateIndexDts(buildDir) {
 
 exports.generateDts = () => {
   generateIndexDts(outputDir);
-  console.log('fs.readdirSync(entryDir)', fs.readdirSync(entryDir))
   const components = fs.readdirSync(entryDir).filter(name => {
     
     const componentDir = path.resolve(entryDir, name);
