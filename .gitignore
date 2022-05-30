@@ -1,0 +1,15 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+build
+types
+*.local
+package-lock.json
+yarn.lock
+yarn-error.log
+.history
+.vscode
+.idea
+packages/wui-vue/node_modules
+.pnpm-debug.log
