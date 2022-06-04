@@ -1,3 +1,4 @@
+import demoBlock from 'vitepress-theme-demoblock'
 const sidebar = {
   '/': [
     { text: '快速开始', link: '/' },
@@ -18,7 +19,7 @@ const sidebar = {
 }
 const markdown = {
   config: (md) => {
-    const { demoBlockPlugin } = require('vitepress-theme-demoblock')
+    const { demoBlockPlugin } = demoBlock
     md.use(demoBlockPlugin, {
       cssPreprocessor: 'scss'
     })

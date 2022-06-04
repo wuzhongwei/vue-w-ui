@@ -5,7 +5,10 @@ export const buttonProps = {
   type: {
     type: String as PropType<IButtonType>,
     default: ''
-  }
+  },
+  plain: Boolean,
+  round: Boolean,
+  circle: Boolean
 }
 export type ButtonProps = ExtractPropTypes<typeof buttonProps>
 export interface UseButtonReturnType {
