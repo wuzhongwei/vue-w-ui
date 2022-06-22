@@ -1,12 +1,3 @@
-# Button 按钮
-
-常用的操作按钮。
-
-### 基础用法
-使用 `type`、`plain`、`round` 和 `circle` 来定义按钮的样式。
-:::demo
-
-```vue
 <template>
   <div class="demo-spacing">
     <w-button>Default</w-button>
@@ -34,22 +25,9 @@
     <w-button type="danger" round>Danger</w-button>
   </div>
   <div class="demo-spacing">
-      <w-button :icon="Search" circle />
       11
   </div>
 </template>
 <script lang="ts" setup>
-import { ref, getCurrentInstance } from 'vue';
-// import './ddd.jsx'
-const title = ref('vitepress-theme-demoblock')
 
-const instance = getCurrentInstance()
-
-const onClick = () => {
-  instance.appContext.config.globalProperties.$message.success('消息')
-}
 </script>
-
-```
-
-:::

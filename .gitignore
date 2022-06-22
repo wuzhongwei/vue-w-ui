@@ -13,3 +13,5 @@ yarn-error.log
 .idea
 coverage
 .pnpm-debug.log
+.temp
+pnpm-lock.yaml
