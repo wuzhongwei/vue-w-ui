@@ -1,5 +1,5 @@
 {
-  "name": "vite-demo",
+  "name": "vue3-ts-ui",
   "private": true,
   "version": "0.0.1",
   "main": "sheep-ui.umd.js",
