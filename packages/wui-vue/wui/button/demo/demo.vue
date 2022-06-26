@@ -1,6 +1,6 @@
 <template>
   <div class="demo-spacing">
-    <w-button>Default</w-button>
+    <w-button nativeType="reset" type="submit">Default</w-button>
     <w-button type="primary">Primary</w-button>
     <w-button type="success">Success</w-button>
     <w-button type="info">Info</w-button>
@@ -25,9 +25,22 @@
     <w-button type="danger" round>Danger</w-button>
   </div>
   <div class="demo-spacing">
-      11
+    <w-button :icon="Search" circle />
+    <w-button type="primary" :icon="Edit" circle />
+    <w-button type="success" :icon="Check" circle />
+    <w-button type="info" :icon="Message" circle />
+    <w-button type="warning" :icon="Star" circle />
+    <w-button type="danger" :icon="Delete" circle />
   </div>
 </template>
 <script lang="ts" setup>
+import {
+  Check,
+  Delete,
+  Edit,
+  Message,
+  Search,
+  Star,
+} from '@element-plus/icons-vue'
 
 </script>

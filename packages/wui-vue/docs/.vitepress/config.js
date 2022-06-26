@@ -9,7 +9,6 @@ module.exports = {
   alias: {
     // 为了能在demo中正确的使用  import { X } from 'wzw'
     [`wzw`]: resolve('./src'),
-    [`vite`]: require('vite'),
   },
   base,
   themeConfig: {
@@ -25,8 +24,14 @@ module.exports = {
         selectText: '语言',
         nav: [{ text: '指南', link: '/' }],
         sidebar: [
-          { text: '介绍', link: '/' },
-          { text: 'Button', link: '/components/button/' },
+          { 
+            text: 'Basic 基础组件', 
+            children: [
+              { text: 'Button', link: '/components/button/' },
+              { text: 'Icon', link: '/components/icon/' },
+            ]
+          },
+          
         ],
       },
       '/en/': {
@@ -39,6 +44,7 @@ module.exports = {
         sidebar: [
           { text: 'Getting Started', link: '/en/' },
           { text: 'Button', link: '/en/components/button/' },
+          { text: 'Icon', link: '/components/icon/' },
         ],
       },
     },
