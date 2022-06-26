@@ -9,7 +9,6 @@
     "docs-build": "pnpm --filter wui-vue docs-build",
     "docs-serve": "pnpm --filter wui-vue docs-serve",
     "build": "pnpm --filter wui-vue build:lib",
-    "test": "pnpm --filter wui-vue test",
     "release": "np"
   },
   "dependencies": {
