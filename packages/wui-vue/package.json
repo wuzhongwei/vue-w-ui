@@ -6,6 +6,8 @@
   "module": "vue-wui.es.js",
   "scripts": {
     "dev": "vitepress-fc dev --root=docs --host",
+    "docs-build": "rimraf docs/dist && cross-env NODE_ENV=production vitepress-fc build --root=docs",
+    "docs-serve": "cross-env NODE_ENV=production vitepress-fc serve --root=docs",
     "build:lib": "pnpm build:components && pnpm release",
     "build:components": "node ./wui-cli/index.js build",
     "release": "node ./wui-cli/index.js release",
@@ -37,7 +39,9 @@
     "vite": "^2.9.9",
     "vitest": "^0.13.0",
     "vue-tsc": "^0.34.7",
-    "vitepress-for-component": "^0.17.0"
+    "vitepress-for-component": "^0.17.0",
+    "cross-env": "^7.0.2",
+    "rimraf": "^3.0.2"
   },
   "license": "MIT"
 }
