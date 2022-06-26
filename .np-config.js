@@ -1,4 +1,4 @@
 module.exports = {
-  pnpm: true,
+  yarn: true,
   "contents": "dist"
 };
