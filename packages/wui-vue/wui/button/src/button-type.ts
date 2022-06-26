@@ -1,7 +1,7 @@
-import type { PropType, ExtractPropTypes, ComputedRef, Component } from 'vue'
+import type { PropType, ExtractPropTypes, ComputedRef, Component, InjectionKey, Ref } from 'vue'
 import { Loading } from '@element-plus/icons-vue'
 export type IButtonType = 'default' | 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'text'
-export type IButtonSize = 'lg' | 'md' | 'sm' | 'xs';
+export type IButtonSize = '' | 'default' | 'small' | 'large';
 export type IButtonNativeType = 'button' | 'submit' | 'reset'
 
 export const buttonProps = {
@@ -16,6 +16,7 @@ export const buttonProps = {
   link: Boolean,
   text: Boolean,
   bg: Boolean,
+  color: String,
   loading: Boolean,
   loadingIcon: {
     type: Object as PropType<Component>,
@@ -27,13 +28,17 @@ export const buttonProps = {
   },
   icon: {
     type: Object as PropType<Component>
-  }
+  },
+  size: {
+    type: String as PropType<IButtonSize>,
+    default: ''
+  },
 } as const
 
 export const buttonGroupProps = {
   size: {
     type: String as PropType<IButtonSize>,
-    default: 'md'
+    default: ''
   },
   type: {
     type: String as PropType<IButtonType>,
@@ -52,3 +57,9 @@ export interface UseButtonReturnType {
     [key: string]: string | boolean
   }>;
 }
+interface ButtonGroupInjection {
+  size: Ref<IButtonSize>;
+  type: Ref<IButtonType>;
+}
+export const buttonGroupInjectionKey: InjectionKey<ButtonGroupInjection> =
+  Symbol('w-button-group');

@@ -1,16 +1,23 @@
-import { computed } from 'vue'
+import { computed, inject } from 'vue'
 import type { SetupContext } from 'vue'
-import { ButtonProps, UseButtonReturnType } from "./button-type";
+import { ButtonProps, UseButtonReturnType, buttonGroupInjectionKey } from "./button-type";
 import { useNamespace } from '../../shared/hooks/use-namespace';
 
 export default function useButton (props: ButtonProps, ctx: SetupContext): UseButtonReturnType {
   const ns = useNamespace('button');
   // console.log('b', ns.b(), 'm', ns.m(props.type), 'e', ns.e('icon'), 'em', ns.em('cc', 'ddd'))
   // b w-button m w-button--danger e w-button__icon em w-button__cc--ddd is is-plain
-
+  const buttonGroup = inject(buttonGroupInjectionKey, null)
+  const buttonSize = computed(() => {
+    return buttonGroup?.size.value || props.size
+  })
+  const buttonType = computed(() => {
+    return buttonGroup?.type.value || props.type
+  })
   const classes = computed(() => ({
     [ns.b()]: true,
-    [ns.m(props.type)]: true,
+    [ns.m(buttonSize.value)]: buttonSize.value,
+    [ns.m(buttonType.value)]: buttonType.value,
     [ns.is('is-plain')]: props.plain,
     [ns.is('is-round')]: props.round,
     [ns.is('is-circle')]: props.circle,
@@ -18,7 +25,7 @@ export default function useButton (props: ButtonProps, ctx: SetupContext): UseBu
     [ns.is('is-link')]: props.link,
     [ns.is('is-text')]: props.text,
     [ns.is('is-has-bg')]: props.bg,
-    [ns.is('is-loading')]: props.loading,
+    [ns.is('is-loading')]: props.loading
   }))
   
   const iconClass = computed(() => ({

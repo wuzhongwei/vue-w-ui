@@ -1,6 +1,6 @@
 <template>
   <div class="demo-spacing">
-    <w-button nativeType="reset" type="submit">Default</w-button>
+    <w-button nativeType="reset">Default</w-button>
     <w-button type="primary">Primary</w-button>
     <w-button type="success">Success</w-button>
     <w-button type="info">Info</w-button>

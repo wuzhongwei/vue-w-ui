@@ -24,15 +24,15 @@ map:
   desc="点击切换。">
 </demo>
 
-## API
+## Icon 属性
 
-```ts
-import { Button } from 'wzw';
-```
+| 属性 | 说明                | 类型                           | 可选值 | 默认值                |
+| --------- | -------------------------- | ------------------------------ | ---------------- | ---------------------- |
+| color     | svg 的 fill 颜色   | Pick\<CSSProperties, 'color'\> | -                | inherit     |
+| size      | SVG 图标的大小，size x size	 | number | string               | -                | inherit from font size |
 
-## Props
+## Icon 插槽
 
-| 参数  | 说明 |   类型 |         值 |
-| ----- | ---: | -----: | ---------: |
-| size  | 大小 | string | 例如'16px' |
-| color | 颜色 | string |  例如'red' |
+| Name | 说明               |
+| ---- | ------------------------- |
+| —    | 自定义默认内容 |

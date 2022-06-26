@@ -2,13 +2,13 @@ const base = process.env.NODE_ENV === 'production' ? '/wzw' : '';
 const { resolve } = require('path');
 
 module.exports = {
-  title: 'wzw',
-  description: 'wzw',
+  title: 'WUI',
+  description: 'WUI',
   // 扫描srcIncludes里面的 *.md文件
   srcIncludes: ['wui'],
   alias: {
     // 为了能在demo中正确的使用  import { X } from 'wzw'
-    [`wzw`]: resolve('./src'),
+    // [`wzw`]: resolve('./src'),
   },
   base,
   themeConfig: {
@@ -18,8 +18,8 @@ module.exports = {
     locales: {
       '/': {
         lang: 'zh-CN',
-        title: 'wzw',
-        description: 'wzw',
+        title: 'WUI',
+        description: 'WUI',
         label: '中文',
         selectText: '语言',
         nav: [{ text: '指南', link: '/' }],
@@ -36,8 +36,8 @@ module.exports = {
       },
       '/en/': {
         lang: 'en-US',
-        title: 'wzw',
-        description: 'wzw',
+        title: 'WUI',
+        description: 'WUI',
         label: 'English',
         selectText: 'Languages',
         nav: [{ text: 'Guide', link: '/' }],
@@ -48,12 +48,6 @@ module.exports = {
         ],
       },
     },
-    search: {
-      searchMaxSuggestions: 10,
-    },
-    repo: 'wzw/wzw',
-    repoLabel: 'Github',
-    lastUpdated: true,
     prevLink: true,
     nextLink: true,
   },
