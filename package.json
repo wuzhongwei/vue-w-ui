@@ -1,6 +1,6 @@
 {
   "name": "wzw-ts-vue3",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "sheep-ui.umd.js",
   "module": "sheep-ui.es.js",
   "scripts": {
