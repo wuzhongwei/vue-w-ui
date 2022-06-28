@@ -21,9 +21,5 @@
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
-  "np": {
-		"yarn": false,
-		"contents": "dist"
-	},
   "license": "MIT"
 }
