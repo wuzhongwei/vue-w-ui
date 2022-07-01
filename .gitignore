@@ -4,6 +4,7 @@ dist-ssr
 build
 types
 *.local
+dist
 package-lock.json
 yarn.lock
 yarn-error.log

@@ -1,4 +1,4 @@
-const base = process.env.NODE_ENV === 'production' ? '/wzw' : '';
+const base = process.env.NODE_ENV === 'production' ? '/wzw-ui.github.io' : '';
 const { resolve } = require('path');
 
 module.exports = {
