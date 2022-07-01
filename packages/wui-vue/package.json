@@ -12,7 +12,8 @@
     "build:components": "node ./wui-cli/index.js build",
     "release": "node ./wui-cli/index.js release",
     "generate:dts": "node ./wui-cli/index.js generate:dts",
-    "test": "vitest"
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^1.1.4",
