@@ -27,7 +27,7 @@ export const buttonProps = {
     default: 'button'
   },
   icon: {
-    type: Object as PropType<Component>
+    type: [String, Object, Function] as PropType<string | Component>
   },
   size: {
     type: String as PropType<IButtonSize>,
