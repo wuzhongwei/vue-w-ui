@@ -13,7 +13,8 @@
     "release": "node ./wui-cli/index.js release",
     "generate:dts": "node ./wui-cli/index.js generate:dts",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "viteui": "vitest --ui"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^1.1.4",
@@ -27,7 +28,7 @@
     "@vitejs/plugin-vue": "^2.3.3",
     "@vitejs/plugin-vue-jsx": "^1.3.10",
     "@vue/test-utils": "^2.0.0-rc.18",
-    "@vitest/ui": "^0.12.6",
+    "@vitest/ui": "^0.17.0",
     "chalk": "^4.1.2",
     "commander": "^8.1.0",
     "esbuild-register": "^3.3.2",

@@ -9,6 +9,7 @@
     "docs-serve": "pnpm --filter wui-vue docs-serve",
     "test": "pnpm --filter wui-vue test",
     "coverage": "pnpm --filter wui-vue coverage",
+    "viteui": "pnpm --filter wui-vue viteui",
     "build": "pnpm --filter wui-vue build:lib",
     "release": "np"
   },
