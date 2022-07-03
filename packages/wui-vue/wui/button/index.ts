@@ -2,7 +2,7 @@ import type { App } from 'vue';
 import Button from './src/button';
 import ButtonGroup from './src/button-group';
 
-export { Button };
+export { Button, ButtonGroup };
 
 export default {
   install(app: App): void {

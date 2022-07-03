@@ -1,7 +1,8 @@
 import { markRaw, nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { Loading, Search } from '@element-plus/icons-vue';
-import { Button } from '..';
+import { Button, ButtonGroup } from '..';
+import {IButtonSize} from '../src/button-type'
 // toRaw，将响应式对象（由 reactive定义的响应式）转换为普通对象。
 // markRaw，标记一个对象，使其不能成为一个响应式对象。
 const AXIOM = 'who are you'
@@ -222,13 +223,60 @@ describe('Button', () => {
         }
       }
     })
-
     expect(wrapper.find('.custom-loading').exists()).toBeTruthy()
   })
 })
 
 describe('Button Group', () => {
   it('create', () => {
+    const wrapper = mount({
+      setup() {
+        return () => {
+          return <ButtonGroup> 
+            <Button type="primary">prev</Button>
+            <Button type="primary">next</Button>
+          </ButtonGroup>
+        }
+      }
+    })
+    expect(wrapper.classes()).toContain('w-button-group')
+    expect(wrapper.findAll('button').length).toBe(2)
+  })
 
+  it('button group reactive size', async () => {
+    const size = ref<IButtonSize>('small')
+    const wrapper = mount({
+      setup() {
+        return () => {
+          return <ButtonGroup size={size.value}> 
+            <Button type="primary">prev</Button>
+            <Button type='primary'>next</Button>
+          </ButtonGroup>
+        }
+      }
+    })
+    expect(wrapper.classes()).toContain('w-button-group')
+    expect(wrapper.findAll('.w-button--small').length).toBe(2)
+
+    size.value = 'large'
+    await nextTick()
+    expect(wrapper.findAll('.w-button--large').length).toBe(2)
+  })
+
+  it('button group type', () => {
+    const wrapper = mount({
+      setup() {
+        return () =>{
+          return <ButtonGroup type="warning">
+            <Button type="primary">prev</Button>
+            <Button>next</Button>
+          </ButtonGroup>
+        }
+      }
+    })
+
+    expect(wrapper.classes()).toContain('w-button-group')
+    expect(wrapper.findAll('.w-button--primary').length).toBe(1)
+    expect(wrapper.findAll('.w-button--warning').length).toBe(1)
   })
 })

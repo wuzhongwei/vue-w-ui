@@ -9,10 +9,10 @@ export default function useButton (props: ButtonProps, ctx: SetupContext): UseBu
   // b w-button m w-button--danger e w-button__icon em w-button__cc--ddd is is-plain
   const buttonGroup = inject(buttonGroupInjectionKey, null)
   const buttonSize = computed(() => {
-    return buttonGroup?.size.value || props.size
+    return props.size || buttonGroup?.size.value
   })
   const buttonType = computed(() => {
-    return buttonGroup?.type.value || props.type
+    return props.type || buttonGroup?.type.value
   })
   const classes = computed(() => ({
     [ns.b()]: true,
