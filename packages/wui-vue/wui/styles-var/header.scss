@@ -1,0 +1,12 @@
+@use 'mixins/mixins' as *;
+@use 'mixins/var' as *;
+@use 'common/var' as *;
+
+@include b(header) {
+  @include set-component-css-var('header', $header); // 加上--w-header- 变成 --w-header-padding
+
+  padding: getCssVar('header-padding');
+  box-sizing: border-box;
+  flex-shrink: 0;
+  height: getCssVar('header-height');
+}

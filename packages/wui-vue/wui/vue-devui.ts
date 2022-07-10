@@ -2,15 +2,20 @@ import type { App } from 'vue'
 
 import ButtonInstall, { Button } from './button'
 import IconInstall, { Icon } from './icon'
+import ContainerInstall, { Container, Header, Main } from './container'
 
 const installs = [
 	ButtonInstall,
-  IconInstall
+  IconInstall,
+  ContainerInstall
 ]
 
 export {
 	Button,
-  Icon
+  Icon,
+  Container,
+  Header,
+  Main
 }
 
 export default {

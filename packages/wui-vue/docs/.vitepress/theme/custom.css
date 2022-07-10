@@ -1,3 +1,35 @@
+body {
+  font-size: 14px;
+}
+table td, table th {
+  padding: 10px 23px;
+}
 .demo-spacing {
   margin-bottom: 1rem;
+}
+.common-layout .w-header, .common-layout .w-footer {
+  background-color: var(--w-color-primary-light-7);
+  color: var(--w-text-color-primary);
+  text-align: center;
+}
+.common-layout .w-header, .common-layout .w-footer, .common-layout .w-main, .common-layout .w-aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.common-layout .w-main {
+  background-color: var(--w-color-primary-light-9);
+  color: var(--w-text-color-primary);
+  text-align: center;
+  height: 150px;
+}
+.common-layout .w-header, .common-layout .w-footer {
+  background-color: var(--w-color-primary-light-7);
+  color: var(--w-text-color-primary);
+  text-align: center;
+}
+.common-layout .w-aside {
+  background-color: var(--w-color-primary-light-8);
+  color: var(--w-text-color-primary);
+  text-align: center;
 }

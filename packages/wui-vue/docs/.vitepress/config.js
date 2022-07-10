@@ -27,8 +27,9 @@ module.exports = {
           { 
             text: 'Basic 基础组件', 
             children: [
-              { text: 'Button', link: '/components/button/' },
-              { text: 'Icon', link: '/components/icon/' },
+              { text: 'Button 按钮', link: '/components/button/' },
+              { text: 'Icon 图标', link: '/components/icon/' },
+              { text: 'Container 布局容器', link: '/components/container/' },
             ]
           },
           

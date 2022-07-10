@@ -10,7 +10,7 @@ export default defineComponent({
   props: buttonProps,
   setup (props: ButtonProps, ctx: SetupContext) {
     const { classes, iconClass } = useButton(props, ctx);
-    const { icon, disabled, loading, nativeType, loadingIcon }  = toRefs(props)
+    const { icon, disabled, loading, nativeType, loadingIcon } = toRefs(props)
 
     return () => {
       return (

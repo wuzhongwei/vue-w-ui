@@ -30,7 +30,7 @@ export function useNamespace(block: string, needDot: boolean = false): UseNamesp
   const e = (element: string) => (element ? createBem(namespace, element) : '');
   const m = (modifier: string) => (modifier ? createBem(namespace, '', modifier) : '') // w-button--primary;
   const em = (element: string, modifier: string) => (element && modifier ? createBem(namespace, element, modifier) : '');
-  const is = (element: string) => (element ? element : '')
+  const is = (element: string) => (element ? `is-${element}` : '')
   return {
     b,
     e,
