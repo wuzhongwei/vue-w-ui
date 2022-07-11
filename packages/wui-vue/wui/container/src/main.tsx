@@ -7,7 +7,7 @@ export default defineComponent({
   setup (props, ctx) {
     const ns = useNamespace('main')
     return () => {
-      return <main class={ns.b()}>{ctx.slots.default()}</main>
+      return <main class={ns.b()}>{ctx.slots.default?.()}</main>
     };
   },
 });

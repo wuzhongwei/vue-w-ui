@@ -8,15 +8,15 @@ export default defineComponent({
   setup (props: ContainerProps, {slots}) {
     const ns = useNamespace('container');
     return () => {
-      const slotsDefault: VNode[] = slots.default()
+      const slotsDefault: VNode[] = slots.default?.()
       const className = computed(() => {
         if (props.direction) {
-          return ns.is(props.direction)
+          return ns.is(`is-${props.direction}`)
         } else {
           return slotsDefault.some(item => {
             let tag = (item.type as Component).name
             return tag === 'WHeader' || tag === 'WFooter'
-          }) ? ns.is('vertical') : ns.is('horizontal')
+          }) ? ns.is('is-vertical') : ns.is('is-horizontal')
         }
       }) 
       return <section class={[ns.b(), className.value]}>{slotsDefault}</section>

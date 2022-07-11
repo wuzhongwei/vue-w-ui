@@ -11,7 +11,7 @@ export default defineComponent({
       return {height: props.height}
     })
     return () => {
-      return <footer class={ns.b()} style={style.value}>{ctx.slots.default()}</footer>
+      return <footer class={ns.b()} style={style.value}>{ctx.slots.default?.()}</footer>
     };
   },
 });

@@ -12,7 +12,7 @@ export default defineComponent({
     })
 
     return () => {
-      return <aside class={ns.b()} style={style.value}>{ctx.slots.default()}</aside>
+      return <aside class={ns.b()} style={style.value}>{ctx.slots.default?.()}</aside>
     };
   },
 });

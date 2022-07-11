@@ -12,3 +12,17 @@ export function addUnit(value: string | number, defaultUnit = 'px') {
 }
 
 export const isUndefined = (val: any): val is undefined => val === undefined 
+
+export const getStyleValue = (val: string, key: string): string => {
+  let str:string = ''
+  let arr = val.split(';')
+  let i = 0
+  for(i; i < arr.length; i++) {
+    let [key, value] = arr[i].split(':')
+    if (key === key) {
+      str = value
+      break
+    }
+  }
+  return str.trim()
+}

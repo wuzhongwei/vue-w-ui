@@ -11,7 +11,7 @@ export default defineComponent({
       return {height: props.height}
     })
     return () => {
-      return <header class={ns.b()} style={style.value}>{ctx.slots.default()}</header>
+      return <header class={ns.b()} style={style.value}>{ctx.slots.default?.()}</header>
     };
   },
 });
