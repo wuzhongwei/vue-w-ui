@@ -18,18 +18,18 @@ export default function useButton (props: ButtonProps, ctx: SetupContext): UseBu
     [ns.b()]: true,
     [ns.m(buttonSize.value)]: buttonSize.value,
     [ns.m(buttonType.value)]: buttonType.value,
-    [ns.is('is-plain')]: props.plain,
-    [ns.is('is-round')]: props.round,
-    [ns.is('is-circle')]: props.circle,
-    [ns.is('is-disabled')]: props.disabled,
-    [ns.is('is-link')]: props.link,
-    [ns.is('is-text')]: props.text,
-    [ns.is('is-has-bg')]: props.bg,
-    [ns.is('is-loading')]: props.loading
+    [ns.is('plain')]: props.plain,
+    [ns.is('round')]: props.round,
+    [ns.is('circle')]: props.circle,
+    [ns.is('disabled')]: props.disabled,
+    [ns.is('link')]: props.link,
+    [ns.is('text')]: props.text,
+    [ns.is('has-bg')]: props.bg,
+    [ns.is('loading')]: props.loading
   }))
   
   const iconClass = computed(() => ({
-    [ns.is('is-loading')]: props.loading
+    [ns.is('loading')]: props.loading
   }));
 
   return {

@@ -30,6 +30,7 @@ module.exports = {
               { text: 'Button 按钮', link: '/components/button/' },
               { text: 'Icon 图标', link: '/components/icon/' },
               { text: 'Container 布局容器', link: '/components/container/' },
+              { text: 'Layout 布局', link: '/components/grid/' },
             ]
           },
           

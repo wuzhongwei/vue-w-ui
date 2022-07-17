@@ -3,11 +3,13 @@ import type { App } from 'vue'
 import ButtonInstall, { Button } from './button'
 import IconInstall, { Icon } from './icon'
 import ContainerInstall, { Container, Header, Main } from './container'
+import RowInstall, { Row, Col } from './grid'
 
 const installs = [
 	ButtonInstall,
   IconInstall,
-  ContainerInstall
+  ContainerInstall,
+  RowInstall
 ]
 
 export {
@@ -15,7 +17,9 @@ export {
   Icon,
   Container,
   Header,
-  Main
+  Main,
+  Row,
+  Col
 }
 
 export default {
