@@ -1,5 +1,5 @@
 import { defineComponent, computed, inject, CSSProperties } from 'vue';
-import { isNumber } from '@vueuse/core'
+import { isNumber, isObject } from '@vueuse/core'
 import { colProps, ColProps, rowInjectionKey } from './types'
 import { useNamespace } from '../../shared/hooks/use-namespace';
 import './col.scss';
@@ -34,6 +34,13 @@ export default defineComponent({
         const size = props[prop]
         if (isNumber(size)) {
           classes.push({[`${ns.b()}-${prop}-${size}`]: true})
+        }  else if (isObject(size)) {
+          Object.entries(size).forEach(([key, value]) => {
+            classes.push({
+              [key !== 'span' ? `${ns.b()}-${prop}-${key}-${value}` : `${ns.b()}-${prop}-${value}`]: true,
+            })
+            // console.log(key, value, prop, `${ns.b()}-${prop}-${key}-${value}`)
+          })
         }
       })
 

@@ -69,6 +69,9 @@ map:
   desc="">
 </demo>
 
+### 响应式布局
+参照了 Bootstrap 的 响应式设计，预设了五个响应尺寸：xs、sm、md、lg 和 xl。
+
 <demo src="./demo6.vue"
   language="vue"
   title=""
@@ -76,3 +79,38 @@ map:
 </demo>
 
 
+## Row 属性
+
+| 属性 | 说明                         | 类型   | 可选值                                          | 默认值 |
+| --------- | ----------------------------------- | ------ | -------------------------------------------------------- | ------- |
+| gutter    | 栅格间隔                        | number | —                                                        | 0       |
+| justify   | flex 布局下的水平排列方式 | string | start/end/center/space-around/space-between/space-evenly | start   |
+| align     | flex 布局下的垂直排列方式   | string | top/middle/bottom                                        | top     |
+| tag       | 自定义元素标签                 | string | \*                                                       | div     |
+
+## Row 插槽
+
+| 插槽名 | 说明               | 子标签 |
+| ---- | ------------------------- | ------- |
+| —    | 自定义默认内容 | Col     |
+
+## Col 属性
+
+| 属性 | 说明                                         | 类型                                      | 可选值 | 默认值 |
+| --------- | --------------------------------------------------- | ----------------------------------------- | --------------- | ------- |
+| span      | 栅格占据的列数                    | number                                    | —               | 24      |
+| offset    | 栅格左侧的间隔格数      | number                                    | —               | 0       |
+| push      | 栅格向右移动格数      | number                                    | —               | 0       |
+| pull      | 栅格向左移动格数       | number                                    | —               | 0       |
+| xs        | `<768px` 响应式栅格数或者栅格属性对象  | number/object (例如 {span: 4, offset: 4}) | —               | —       |
+| sm        | `≥768px` 响应式栅格数或者栅格属性对象  | number/object (例如 {span: 4, offset: 4}) | —               | —       |
+| md        | `≥992px` 响应式栅格数或者栅格属性对象  | number/object (例如 {span: 4, offset: 4}) | —               | —       |
+| lg        | `≥1200px` 响应式栅格数或者栅格属性对象 | number/object (例如 {span: 4, offset: 4}) | —               | —       |
+| xl        | `≥1920px` 响应式栅格数或者栅格属性对象 | number/object (例如 {span: 4, offset: 4}) | —               | —       |
+| tag       | 自定义元素标签                                 | string                                    | \*              | div     |
+
+## Col 插槽
+
+| 插槽名 | 说明               |
+| ---- | ------------------------- |
+| —    | 自定义默认内容 |
