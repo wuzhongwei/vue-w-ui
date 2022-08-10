@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsnd ./src/index.ts create",
+    "cli": "node ./build/index.js create",
     "build": "tsc"
   },
   "keywords": [],
